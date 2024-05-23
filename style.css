@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #000; }
+  background-image: url("images/damn.gif"); }
   body h1 {
     font-size: 36px;
     margin-bottom: 0; }
@@ -37,7 +37,7 @@ body {
       body .card .current-song .img-wrap {
         position: relative;
         margin: 0 auto;
-        width: 270px;
+        /* width: 270px; */
         height: 200px;
         overflow: hidden;
         border-radius: 20px;
@@ -218,6 +218,15 @@ body {
 
 .play-list::-webkit-scrollbar-track {
   background: #071739; }
+
+.jarak-bawah {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+.style-logo {
+  width: 300px;
+}
 
 @keyframes play {
   0% {

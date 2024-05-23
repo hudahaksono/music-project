@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
+    <title>Kendrick's Album</title>
     
     <!-- <script src="script.js" defer></script> -->
     
@@ -52,10 +52,21 @@
         state = {
           index: 3,
           currentTime: '0:00',
-          musicList: [{name:'Nice piano and ukulele', author: 'Royalty', img: 'https://www.bensound.com/bensound-img/buddy.jpg', audio:'https://www.bensound.com/bensound-music/bensound-buddy.mp3', duration: '2:02'}, 
-            {name:'Gentle acoustic', author: 'Acoustic', img: 'https://www.bensound.com/bensound-img/sunny.jpg', audio:'https://www.bensound.com//bensound-music/bensound-sunny.mp3', duration: '2:20'},
-            {name:'Corporate motivational', author: 'Corporate', img: 'https://www.bensound.com/bensound-img/energy.jpg', audio:'https://www.bensound.com/bensound-music/bensound-energy.mp3', duration: '2:59'},
-            {name:'Slow cinematic', author: 'Royalty', img: 'https://www.bensound.com/bensound-img/slowmotion.jpg', audio:'https://www.bensound.com/bensound-music/bensound-slowmotion.mp3', duration: '3:26'}],
+          musicList:
+            [
+                {name:'Humble', author: 'Kendrick Lamar', img: 'images/imgmusic/humble.jpeg', audio:'music/humble.mp3', duration: '2:57'},
+                {name:'DNA', author: 'Kendrick Lamar', img: 'images/imgmusic/dna.jpeg', audio:'music/dna.mpeg', duration: '4:46'},
+                {name:'Element', author: 'Kendrick Lamar', img: 'images/imgmusic/element.jpeg', audio:'music/element.mpeg', duration: '3:33'},
+                {name:'Love', author: 'Kendrick Lamar', img: 'images/imgmusic/love.jpeg', audio:'music/love.mpeg', duration: '3:42'},
+                {name:'Loyality', author: 'Kendrick Lamar', img: 'images/imgmusic/loyality.jpeg', audio:'music/loyality.mpeg', duration: '3:59'},
+                {name:'Pride', author: 'Kendrick Lamar', img: 'images/imgmusic/pride.jpeg', audio:'music/pride.mpeg', duration: '4:36'},
+                {name:'Like That', author: 'Kendrick Lamar', img: 'images/imgmusic/likethat.jpg', audio:'music/likethat.mp3', duration: '4:36'},
+                {name:'Meet The Graham', author: 'Kendrick Lamar', img: 'images/imgmusic/mtg.jpg', audio:'music/mtg.mp3', duration: '6:42'},
+                {name:'Not Like Us', author: 'Kendrick Lamar', img: 'images/imgmusic/notlikeus.jpg', audio:'music/notlikeus.mp3', duration: '4:40'},
+                {name:'Rich Spirit', author: 'Kendrick Lamar', img: 'images/imgmusic/richspirit.jpg', audio:'music/richspirit.mp3', duration: '3:24'},
+                {name:'Count Me Out', author: 'Kendrick Lamar', img: 'images/imgmusic/cmo.jpg', audio:'music/cmo.mp3', duration: '4:51'},
+                {name:'Euphoria', author: 'Kendrick Lamar', img: 'images/imgmusic/euphoria.webp', audio:'music/euphoria.mp3', duration: '6:33'},
+            ],
           pause: false,
         };
 
@@ -200,6 +211,9 @@
           const currentSong = musicList[index];
           return (
             <div className="card">
+            <div className="jarak-bawah">
+                <img src="images/logo-white.png" className="style-logo"/>
+            </div>
               <div className="current-song">
                 <audio ref={ref => this.playerRef = ref}>
                   <source src={ currentSong.audio } type="audio/ogg"/>
@@ -270,7 +284,5 @@
 </head>
 <body>
     <div id="root"></div>
-    <a target="_blank" title="instagram/web__addict" href="https://www.instagram.com/web__addict/"><i class="fab fa-instagram"></i></a>
-    
 </body>
 </html>
